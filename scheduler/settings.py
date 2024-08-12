@@ -160,7 +160,6 @@ SPECTACULAR_SETTINGS = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "karthiksalanki1999@gmail.com"  # Sender email ID
-# Sender email password
-EMAIL_HOST_PASSWORD ="hpwy fxsp qnyp blle"
+EMAIL_HOST_USER = "karthiksalanki@gmail.com"  # Replace with your email
+EMAIL_HOST_PASSWORD ="xxxx xxxx xxxx xxxx"  #   Replace with your password
 EMAIL_USE_TLS = True
