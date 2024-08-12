@@ -20,38 +20,36 @@
 
 *   Installation:
 
-    1.Clone the repository:
-        git clone https://github.com/your-username/your-repository.git
+    *   Clone the repository:
+        *    git clone https://github.com/your-username/your-repository.git
 
-    2.Navigate to the project directory:
-        cd project-repository
+    *   Navigate to the project directory:
+        *    cd project-repository
 
-    3.Set up a virtual environment:
-        python -m venv venv
-        venv\Scripts\activate   # on Linux venv/bin/activate
+    *   Set up a virtual environment:
+        *    python -m venv venv
+        *    venv\Scripts\activate   # on Linux venv/bin/activate
 
-    4.Install dependencies:
-        pip install -r requirements.txt
+    *   Install dependencies:
+        *    pip install -r requirements.txt
 
-    5.Set up the database:
-        Default sqlite3 Database
-        python manage.py migrate
+    *   Set up the database(Using default sqlite3 Database):
+        *    python manage.py migrate
 
-    6.Run the development server:
-        python manage.py runserver
+    *   Run the development server:
+        *    python manage.py runserver
 
 
 *   Usage:
-        1.Starting the Scheduler:
+    *    Starting the Scheduler:
             The scheduler is initiated automatically when the server starts.
 
-        2.Using the APIs:
+    *   Using the APIs:
+        *   Create a Job:
+                curl -X POST http://localhost:8000/api/job/ -H "Content-Type: application/json" -d '{"name":"Interval Job Example","last_run": "2024-08-10T09:00:00Z","next_run": "2024-08-12T22:59:12.295049Z","schedule_type": "interval","schedule_details": {"seconds": 5}}'
 
-            Create a Job:
-            curl -X POST http://localhost:8000/api/job/ -H "Content-Type: application/json" -d '{"name": "Test Job", "schedule_type": "interval", "schedule_details": {"minutes": 2}}'
-
-        3.List Jobs:
-            curl http://localhost:8000/api/jobs/
+        *   List Jobs:
+                curl http://localhost:8000/api/jobs/
 
 *   API Documentation:
     *   Your API is documented using drf-spectacular. Once the server is running, you can access the API
